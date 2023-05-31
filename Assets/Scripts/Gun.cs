@@ -1,20 +1,31 @@
 using UnityEngine;
+using Zinnia.Action;
 
 public class Gun : MonoBehaviour
 {
   public GameObject barrel;
-  public void Shoot()
-  {
-    bool isHit = Physics.Raycast(barrel.transform.position, barrel.transform.forward, out RaycastHit hitData, 100f);
+  public float fireRate;
+  public FloatAction squeezeVal;
+  public AudioSource gunSound;
+  private WaitForSeconds wait = new WaitForSeconds(0.07f);
+  private float nextFire;
 
-    if (isHit)
+  void Update()
+  {
+    if (squeezeVal.Value > 0.9 && Time.time > nextFire)
     {
-      if (hitData.transform.tag == "Enemy")
+      nextFire = Time.time + fireRate;
+      gunSound.Play();
+      bool isHit = Physics.Raycast(barrel.transform.position, barrel.transform.forward, out RaycastHit hitData, 100f);
+      if (isHit)
       {
-        Enemy hitEnemy = hitData.transform.GetComponent<Enemy>();
-        if (hitEnemy != null)
+        if (hitData.transform.tag == "Enemy")
         {
-          hitEnemy.Kill();
+          Enemy hitEnemy = hitData.transform.GetComponent<Enemy>();
+          if (hitEnemy != null)
+          {
+            hitEnemy.Kill();
+          }
         }
       }
     }
