@@ -646,7 +646,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 190457211998266731}
   animator: {fileID: 285583014872259720}
-  attackRange: 1.8
+  attackRange: 2
+  attackDamage: 10
+  killPoint: 10
 --- !u!195 &190457211998266731
 NavMeshAgent:
   m_ObjectHideFlags: 0

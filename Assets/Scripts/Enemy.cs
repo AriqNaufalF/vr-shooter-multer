@@ -6,23 +6,27 @@ public class Enemy : MonoBehaviour
   public NavMeshAgent agent;
   public Animator animator;
   public float attackRange = 1.8f;
+  public float attackDamage = 10f;
+  public int killPoint = 10;
 
-  private GameObject target;
+  private Player target;
 
   public void Kill()
   {
+    GetComponent<Collider>().enabled = false;
+    target.UpdateScore(killPoint);
     animator.SetBool("Dying", true);
-    Invoke("DestroyMe", 4f);
+    Destroy(gameObject, 4f);
   }
 
-  void DestroyMe()
+  public void Hit()
   {
-    Object.Destroy(gameObject);
+    target.TakeDamage(attackDamage);
   }
 
   void Start()
   {
-    target = GameObject.FindGameObjectWithTag("Player");
+    target = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     agent.updatePosition = false;
   }
 
