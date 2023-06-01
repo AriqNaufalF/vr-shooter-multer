@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
   {
     bool canMove = !animator.GetBool("Dying") && Vector3.Distance(transform.position, target.transform.position) > attackRange;
     animator.SetBool("Moving", canMove);
-    animator.SetBool("Attacking", !canMove);
+    animator.SetBool("Attacking", !canMove && !animator.GetBool("Dying"));
     agent.destination = canMove ? target.transform.position : transform.position;
   }
 
