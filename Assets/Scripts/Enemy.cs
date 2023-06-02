@@ -3,6 +3,10 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+  public AudioSource soundPlayer;
+  public AudioClip deathSound;
+  public AudioClip attackSound;
+  public AudioClip[] gruntSound;
   public NavMeshAgent agent;
   public Animator animator;
   public float attackRange = 1.8f;
@@ -16,7 +20,22 @@ public class Enemy : MonoBehaviour
     GetComponent<Collider>().enabled = false;
     target.UpdateScore(killPoint);
     animator.SetBool("Dying", true);
+    soundPlayer.PlayOneShot(deathSound);
     Destroy(gameObject, 4f);
+  }
+
+  public void Grunt()
+  {
+    int index = Random.Range(0, gruntSound.Length * 4);
+    if (index < gruntSound.Length)
+    {
+      soundPlayer.PlayOneShot(gruntSound[index]);
+    }
+  }
+
+  public void Swipe()
+  {
+    soundPlayer.PlayOneShot(attackSound);
   }
 
   public void Hit()

@@ -4,11 +4,17 @@ using Zinnia.Visual;
 
 public class Player : MonoBehaviour
 {
-  public float defaultHealth = 100f;
+  public AudioSource soundPlayer;
+  public AudioClip hitSound;
+  public AudioClip deathSound;
+
   public int score;
+  public TextMeshPro scoreText;
+
   public CameraColorOverlay hitFader;
   public CameraColorOverlay startFader;
-  public TextMeshPro scoreText;
+
+  public float defaultHealth = 100f;
   public GameObject healthBar;
   private float currentHealth;
 
@@ -33,10 +39,12 @@ public class Player : MonoBehaviour
     if (currentHealth > 0)
     {
       hitFader.Blink();
+      soundPlayer.PlayOneShot(hitSound);
     }
     else
     {
       ResetPlayer();
+      soundPlayer.PlayOneShot(deathSound);
     }
   }
 
