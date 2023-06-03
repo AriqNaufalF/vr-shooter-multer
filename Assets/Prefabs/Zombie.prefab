@@ -648,6 +648,7 @@ MonoBehaviour:
   soundPlayer: {fileID: 1516335572382124802}
   deathSound: {fileID: 8300000, guid: a5759a929020b41cab58b6c41974862a, type: 3}
   attackSound: {fileID: 8300000, guid: dd1338b991c73447a983adbc8effe3d5, type: 3}
+  hurtSound: {fileID: 8300000, guid: 5d09dd86efd604b0e9048fd674a6fa27, type: 3}
   gruntSound:
   - {fileID: 8300000, guid: 1fb0ffef842b745bda4a400b7e6914bb, type: 3}
   - {fileID: 8300000, guid: 8e4f270ae09c54b44b0a6406951877ea, type: 3}
@@ -656,6 +657,7 @@ MonoBehaviour:
   attackRange: 2
   attackDamage: 10
   killPoint: 10
+  health: 10
 --- !u!195 &190457211998266731
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -674,7 +676,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.05
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4

@@ -6,14 +6,20 @@ public class SpawnManager : MonoBehaviour
   public SpawnArea[] spawnLocations;
   public GameObject[] enemies;
   public CountdownTimer timer;
-  public Transform player;
+  public GameObject player;
+  private Player playerScript;
+
+  void Start()
+  {
+    playerScript = player.GetComponent<Player>();
+  }
 
   public void SpawnRandom()
   {
     int areaIndex = Random.Range(0, spawnLocations.Length);
-    int enemyIndex = Random.Range(0, enemies.Length);
+    int enemyIndex = playerScript.score > 100 ? Random.Range(0, enemies.Length) : 0;
 
-    Instantiate(enemies[enemyIndex], spawnLocations[areaIndex].GetRandomPosition(), player.rotation);
+    Instantiate(enemies[enemyIndex], spawnLocations[areaIndex].GetRandomPosition(), player.transform.rotation);
     timer.Begin();
   }
 }

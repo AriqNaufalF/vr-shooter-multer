@@ -1065,6 +1065,7 @@ MonoBehaviour:
   hitParticle: {fileID: 3222787940750835313, guid: d8bc6e9ff072ad14da30c1bb8ca0733b, type: 3}
   shotParticle: {fileID: 904361446988630816, guid: 4ef7d30afae670b40bd23f81eb5ff9cb, type: 3}
   fireRate: 0.25
+  damage: 5
   squeezeVal: {fileID: 1736959279}
   gunSound: {fileID: 172095666}
 --- !u!1 &172095665
@@ -1096,7 +1097,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6739c01659ad96d47987f4ddee226b36, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.9
+  m_Volume: 0.815
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1140,7 +1141,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.18
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1462,9 +1463,10 @@ MonoBehaviour:
   - {fileID: 664752456}
   - {fileID: 1628093842}
   enemies:
+  - {fileID: 202332969029552756, guid: eb1ebf57a34d3d04ebfc4e43ba804d3c, type: 3}
   - {fileID: 189681724797143580, guid: 048eef3bda2105f4fa5d0c2c5aa8137f, type: 3}
   timer: {fileID: 1602177650}
-  player: {fileID: 291612164}
+  player: {fileID: 1101952778}
 --- !u!4 &212655932
 Transform:
   m_ObjectHideFlags: 0
@@ -1627,11 +1629,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bcdd03ad47d99849951564b1049304b, type: 3}
---- !u!4 &291612164 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4419020640412130, guid: 114b3c3ce4645364a97c8f0803bed65b, type: 3}
-  m_PrefabInstance: {fileID: 705585213}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &296812613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3028,7 +3025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7455428504947032323, guid: c83d63619306b0845a841dd3cc213a70, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7455428504947032323, guid: c83d63619306b0845a841dd3cc213a70, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3480,7 +3477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4419020640412130, guid: 114b3c3ce4645364a97c8f0803bed65b, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4419020640412130, guid: 114b3c3ce4645364a97c8f0803bed65b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4966,7 +4963,7 @@ Transform:
   - {fileID: 2078250862}
   - {fileID: 2130034114}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1070074911
 GameObject:
@@ -6734,7 +6731,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1458079943 stripped
 MonoBehaviour:

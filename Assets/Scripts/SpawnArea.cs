@@ -22,7 +22,7 @@ public class SpawnArea : MonoBehaviour
   {
     float xPosition = Random.Range(xMin, xMax);
     float zPosition = Random.Range(zMin, zMax);
-    Debug.Log(new Vector3(xPosition, 0, zPosition).ToString());
+
     return new Vector3(xPosition, 0, zPosition);
   }
 }

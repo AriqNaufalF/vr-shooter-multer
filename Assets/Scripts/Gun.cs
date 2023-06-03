@@ -7,6 +7,7 @@ public class Gun : MonoBehaviour
   public GameObject hitParticle;
   public GameObject shotParticle;
   public float fireRate;
+  public float damage = 5;
   public FloatAction squeezeVal;
   public AudioSource gunSound;
   private WaitForSeconds wait = new WaitForSeconds(0.07f);
@@ -40,7 +41,7 @@ public class Gun : MonoBehaviour
           Enemy hitEnemy = hitData.transform.GetComponent<Enemy>();
           if (hitEnemy != null)
           {
-            hitEnemy.Kill();
+            hitEnemy.Kill(damage);
           }
         }
       }
