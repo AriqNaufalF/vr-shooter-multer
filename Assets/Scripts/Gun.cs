@@ -12,10 +12,16 @@ public class Gun : MonoBehaviour
   public AudioSource gunSound;
   private WaitForSeconds wait = new WaitForSeconds(0.07f);
   private float nextFire;
+  private GameController gameController;
+
+  void Start()
+  {
+    gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+  }
 
   void Update()
   {
-    if (squeezeVal.Value > 0.9 && Time.time > nextFire)
+    if (squeezeVal.Value > 0.9 && Time.time > nextFire && gameController.isPlaying)
     {
       // Add fire rate delay to gun
       nextFire = Time.time + fireRate;
