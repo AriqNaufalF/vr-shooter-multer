@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
   public void SpawnRandom()
   {
     int areaIndex = Random.Range(0, spawnLocations.Length);
-    int enemyIndex = playerScript.score > 100 ? Random.Range(0, enemies.Length) : 0;
+    int enemyIndex = playerScript.scoreSO.value > 100 ? Random.Range(0, enemies.Length) : 0;
 
     Instantiate(enemies[enemyIndex], spawnLocations[areaIndex].GetRandomPosition(), player.transform.rotation);
     timer.Begin();
@@ -39,7 +39,6 @@ public class GameController : MonoBehaviour
 
   public void ResetGame()
   {
-    isPlaying = true;
     PlayGame();
     playerScript.ResetPlayer();
   }

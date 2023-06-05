@@ -1477,7 +1477,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0e663e1c7fb2a41aa0438eb1e1ee80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathUiContainer: {fileID: 0}
   pauseUiContainer: {fileID: 1430513733}
   leftRayInteractor: {fileID: 1420658887}
   rightRayInteractor: {fileID: 1412679878}
@@ -6434,8 +6433,8 @@ MonoBehaviour:
   soundPlayer: {fileID: 1101952785}
   hitSound: {fileID: 8300000, guid: d1bb363feaf2d4e01b5d111f074572f6, type: 3}
   deathSound: {fileID: 8300000, guid: 8ae66f06635a94f4fb885b61faefabb0, type: 3}
-  score: 0
   scoreText: {fileID: 1691981747}
+  scoreSO: {fileID: 11400000, guid: 55ca1537533caa1449874fd614efbd08, type: 2}
   hitFader: {fileID: 670123876}
   startFader: {fileID: 1663047563}
   defaultHealth: 100
@@ -9959,7 +9958,7 @@ MonoBehaviour:
   overlayColor: {r: 0, g: 0, b: 0, a: 1}
   overlayMaterial: {fileID: 2100000, guid: 47213dfd8c287cd44a187c9d49d899f6, type: 2}
   addDuration: 0
-  removeDuration: 2
+  removeDuration: 1
   appliedDuration: 2
   Added:
     m_PersistentCalls:
@@ -12352,7 +12351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4006109060056840, guid: b753b84b310350445b6f3a72a93c0cb0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.06
+      value: -1.91
       objectReference: {fileID: 0}
     - target: {fileID: 4006109060056840, guid: b753b84b310350445b6f3a72a93c0cb0, type: 3}
       propertyPath: m_LocalPosition.z

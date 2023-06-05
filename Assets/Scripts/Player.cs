@@ -1,5 +1,7 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Zinnia.Visual;
 
 public class Player : MonoBehaviour
@@ -8,8 +10,8 @@ public class Player : MonoBehaviour
   public AudioClip hitSound;
   public AudioClip deathSound;
 
-  public int score;
   public TextMeshPro scoreText;
+  public IntSO scoreSO;
 
   public CameraColorOverlay hitFader;
   public CameraColorOverlay startFader;
@@ -21,7 +23,7 @@ public class Player : MonoBehaviour
   public void ResetPlayer()
   {
     startFader.Blink();
-    score = 0;
+    scoreSO.value = 0;
     UpdateScore(0);
     healthBar.transform.localScale = Vector3.one;
     currentHealth = defaultHealth;
@@ -30,6 +32,14 @@ public class Player : MonoBehaviour
     {
       Destroy(enemy.gameObject);
     }
+  }
+
+  IEnumerator Death()
+  {
+    startFader.Blink();
+    soundPlayer.PlayOneShot(deathSound);
+    yield return new WaitForSeconds(deathSound.length);
+    SceneManager.LoadScene("DeathScene");
   }
 
   public void TakeDamage(float damage)
@@ -43,15 +53,14 @@ public class Player : MonoBehaviour
     }
     else
     {
-      ResetPlayer();
-      soundPlayer.PlayOneShot(deathSound);
+      StartCoroutine("Death");
     }
   }
 
   public void UpdateScore(int point)
   {
-    score += point;
-    scoreText.text = score.ToString("D9");
+    scoreSO.value += point;
+    scoreText.text = scoreSO.value.ToString("D9");
   }
 
   void Start()
