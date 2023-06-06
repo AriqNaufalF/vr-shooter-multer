@@ -1,5 +1,6 @@
 using UnityEngine;
 using Zinnia.Utility;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -63,5 +64,10 @@ public class GameController : MonoBehaviour
     timer.Pause();
     AudioListener.pause = true;
     Time.timeScale = 0;
+  }
+
+  public void ToMainMenu()
+  {
+    SceneManager.LoadScene("MainMenuScene");
   }
 }

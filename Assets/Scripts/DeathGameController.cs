@@ -19,8 +19,8 @@ public class DeathGameController : MonoBehaviour
     SceneManager.LoadScene("PlayScene");
   }
 
-  public void MainMenu()
+  public void ToMainMenu()
   {
-    Debug.Log("Main menu");
+    SceneManager.LoadScene("MainMenuScene");
   }
 }
