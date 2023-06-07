@@ -31,7 +31,10 @@ public class GameController : MonoBehaviour
 
   public void NextStage()
   {
-    timer.StartTime -= 0.5f;
+    if (timer.StartTime > 0.5f)
+    {
+      timer.StartTime -= 0.5f;
+    }
     foreach (var enemy in enemies)
     {
       Enemy enemySc = enemy.GetComponent<Enemy>();

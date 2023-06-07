@@ -3,6 +3,7 @@ using UnityEngine;
 public class PowerUp : MonoBehaviour
 {
   public float boostDamage = 20;
+  public float fireRateBoost = 0.15f;
   public float appliedDuration = 5;
   private Gun gun;
 
@@ -14,7 +15,8 @@ public class PowerUp : MonoBehaviour
 
   public void UseItem()
   {
-    gun.damage += boostDamage;
+    gun.damage *= boostDamage;
+    gun.fireRate = fireRateBoost;
     Destroy(gameObject);
   }
 }

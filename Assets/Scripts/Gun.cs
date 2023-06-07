@@ -7,18 +7,20 @@ public class Gun : MonoBehaviour
   public GameObject barrel;
   public GameObject hitParticle;
   public GameObject shotParticle;
-  public float fireRate;
+  public float fireRate = 0.25f;
+  private float defaultFireRate;
   private float defaultDamage = 5;
   public float damage = 5;
   public FloatAction squeezeVal;
   public AudioSource gunSound;
-  private WaitForSeconds wait = new WaitForSeconds(0.07f);
   private float nextFire;
   private GameController gameController;
 
   void Start()
   {
     gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+    defaultFireRate = fireRate;
+    defaultDamage = damage;
   }
 
   void Update()
@@ -77,5 +79,6 @@ public class Gun : MonoBehaviour
   {
     yield return new WaitForSeconds(duration);
     damage = defaultDamage;
+    fireRate = defaultFireRate;
   }
 }
