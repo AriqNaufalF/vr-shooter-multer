@@ -642,10 +642,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1fb0ffef842b745bda4a400b7e6914bb, type: 3}
   agent: {fileID: 3059703038003802715}
   animator: {fileID: 202332969036822528}
+  dropItems:
+  - {fileID: 1744407837024274, guid: 2f3e352268bf84b45acf0d56b0b89518, type: 3}
+  - {fileID: 107744, guid: 0782c4fdae5f1624ba26300a1dc7a0a7, type: 3}
   attackRange: 1.8
-  attackDamage: 15
+  attackDamage: 10
   killPoint: 20
-  health: 20
+  health: 10
 --- !u!1 &202332969029552758
 GameObject:
   m_ObjectHideFlags: 0

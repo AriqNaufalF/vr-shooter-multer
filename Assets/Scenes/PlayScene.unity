@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 163269306}
   m_Layer: 0
   m_Name: Weapon
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -418,6 +418,7 @@ Transform:
   - {fileID: 664752457}
   - {fileID: 1628093843}
   - {fileID: 1602177649}
+  - {fileID: 638016172}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -445,6 +446,7 @@ MonoBehaviour:
   - {fileID: 189681724797143580, guid: 048eef3bda2105f4fa5d0c2c5aa8137f, type: 3}
   - {fileID: 202332969029552756, guid: eb1ebf57a34d3d04ebfc4e43ba804d3c, type: 3}
   timer: {fileID: 1602177650}
+  stageTimer: {fileID: 638016173}
   player: {fileID: 1101952778}
   isPlaying: 1
 --- !u!1 &214914477
@@ -1262,6 +1264,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd299fedf620074b8e4ce0978a7f425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &638016171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 638016172}
+  - component: {fileID: 638016173}
+  m_Layer: 0
+  m_Name: StageTimer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &638016172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638016171}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 212655932}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &638016173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638016171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d491f4b177483f4198fddd1a827530e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTime: 90
+  beginOnEnable: 1
+  Started:
+    m_PersistentCalls:
+      m_Calls: []
+  Cancelled:
+    m_PersistentCalls:
+      m_Calls: []
+  Paused:
+    m_PersistentCalls:
+      m_Calls: []
+  Resumed:
+    m_PersistentCalls:
+      m_Calls: []
+  Completed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 212655933}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: NextStage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  StillRunning:
+    m_PersistentCalls:
+      m_Calls: []
+  NotRunning:
+    m_PersistentCalls:
+      m_Calls: []
+  ElapsedTimeEmitted:
+    m_PersistentCalls:
+      m_Calls: []
+  RemainingTimeEmitted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &654542034 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2884100001877750362, guid: fe6a616c6215faa47b11c459561a0e7f, type: 3}
@@ -2692,13 +2779,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundPlayer: {fileID: 1101952785}
   hitSound: {fileID: 8300000, guid: d1bb363feaf2d4e01b5d111f074572f6, type: 3}
-  deathSound: {fileID: 8300000, guid: 8ae66f06635a94f4fb885b61faefabb0, type: 3}
   scoreText: {fileID: 1691981747}
   scoreSO: {fileID: 11400000, guid: 55ca1537533caa1449874fd614efbd08, type: 2}
   hitFader: {fileID: 670123876}
   startFader: {fileID: 1663047563}
   defaultHealth: 100
   healthBar: {fileID: 926307653}
+  currentHealth: 0
 --- !u!82 &1101952785
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4321,7 +4408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d491f4b177483f4198fddd1a827530e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 4
+  startTime: 6
   beginOnEnable: 1
   Started:
     m_PersistentCalls:

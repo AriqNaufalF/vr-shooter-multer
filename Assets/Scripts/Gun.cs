@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using Zinnia.Action;
 
@@ -7,6 +8,7 @@ public class Gun : MonoBehaviour
   public GameObject hitParticle;
   public GameObject shotParticle;
   public float fireRate;
+  private float defaultDamage = 5;
   public float damage = 5;
   public FloatAction squeezeVal;
   public AudioSource gunSound;
@@ -50,7 +52,30 @@ public class Gun : MonoBehaviour
             hitEnemy.Kill(damage);
           }
         }
+        else if (hitData.transform.tag == "PowerUp")
+        {
+          PowerUp hitPowerUp = hitData.transform.GetComponent<PowerUp>();
+          if (hitPowerUp != null)
+          {
+            hitPowerUp.UseItem();
+            StartCoroutine(ResetGun(hitPowerUp.appliedDuration));
+          }
+        }
+        else if (hitData.transform.tag == "HealPotion")
+        {
+          Heal hitHeal = hitData.transform.GetComponent<Heal>();
+          if (hitHeal != null)
+          {
+            hitHeal.UseItem();
+          }
+        }
       }
     }
+  }
+
+  IEnumerator ResetGun(float duration)
+  {
+    yield return new WaitForSeconds(duration);
+    damage = defaultDamage;
   }
 }

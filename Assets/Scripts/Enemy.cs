@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
   public AudioClip[] gruntSound;
   public NavMeshAgent agent;
   public Animator animator;
+  public GameObject[] dropItems;
   public float attackRange = 1.8f;
   public float attackDamage = 10f;
   public int killPoint = 10;
@@ -28,6 +29,19 @@ public class Enemy : MonoBehaviour
       animator.SetBool("Dying", true);
       soundPlayer.PlayOneShot(deathSound);
       Destroy(gameObject, 4f);
+    }
+  }
+
+  public void DropItem()
+  {
+    float chance = Random.value;
+    if (chance <= 0.1)
+    {
+      Instantiate(dropItems[0], gameObject.transform.position + Vector3.up, gameObject.transform.rotation);
+    }
+    else if (chance <= 0.2)
+    {
+      Instantiate(dropItems[1], gameObject.transform.position + Vector3.up, gameObject.transform.rotation);
     }
   }
 

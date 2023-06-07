@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
   public SpawnArea[] spawnLocations;
   public GameObject[] enemies;
   public CountdownTimer timer;
+  public CountdownTimer stageTimer;
   public GameObject player;
   public bool isPlaying = true;
   private Player playerScript;
@@ -26,6 +27,18 @@ public class GameController : MonoBehaviour
 
     Instantiate(enemies[enemyIndex], spawnLocations[areaIndex].GetRandomPosition(), player.transform.rotation);
     timer.Begin();
+  }
+
+  public void NextStage()
+  {
+    timer.StartTime -= 0.5f;
+    foreach (var enemy in enemies)
+    {
+      Enemy enemySc = enemy.GetComponent<Enemy>();
+      enemySc.health += 5;
+      enemySc.attackDamage += 5;
+    }
+    stageTimer.Begin();
   }
 
   public void togglePause()
@@ -51,6 +64,7 @@ public class GameController : MonoBehaviour
     leftRayInteractor.SetActive(false);
     rightRayInteractor.SetActive(false);
     timer.Resume();
+    stageTimer.Resume();
     Time.timeScale = 1;
     AudioListener.pause = false;
   }
@@ -62,6 +76,7 @@ public class GameController : MonoBehaviour
     leftRayInteractor.SetActive(true);
     rightRayInteractor.SetActive(true);
     timer.Pause();
+    stageTimer.Pause();
     AudioListener.pause = true;
     Time.timeScale = 0;
   }

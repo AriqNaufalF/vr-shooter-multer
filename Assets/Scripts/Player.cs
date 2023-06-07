@@ -1,4 +1,3 @@
-using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,7 +7,6 @@ public class Player : MonoBehaviour
 {
   public AudioSource soundPlayer;
   public AudioClip hitSound;
-  public AudioClip deathSound;
 
   public TextMeshPro scoreText;
   public IntSO scoreSO;
@@ -18,7 +16,7 @@ public class Player : MonoBehaviour
 
   public float defaultHealth = 100f;
   public GameObject healthBar;
-  private float currentHealth;
+  public float currentHealth;
 
   public void ResetPlayer()
   {
@@ -34,14 +32,6 @@ public class Player : MonoBehaviour
     }
   }
 
-  IEnumerator Death()
-  {
-    startFader.Blink();
-    soundPlayer.PlayOneShot(deathSound);
-    yield return new WaitForSeconds(deathSound.length);
-    SceneManager.LoadScene("DeathScene");
-  }
-
   public void TakeDamage(float damage)
   {
     currentHealth -= damage;
@@ -53,7 +43,7 @@ public class Player : MonoBehaviour
     }
     else
     {
-      StartCoroutine("Death");
+      SceneManager.LoadScene("DeathScene");
     }
   }
 
