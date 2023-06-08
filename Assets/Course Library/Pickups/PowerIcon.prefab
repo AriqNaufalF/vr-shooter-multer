@@ -111,4 +111,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boostDamage: 20
-  appliedDuration: 5
+  fireRateBoost: 0.15
+  appliedDuration: 7.5

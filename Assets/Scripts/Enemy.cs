@@ -3,14 +3,22 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-  public AudioSource soundPlayer;
-  public AudioClip deathSound;
-  public AudioClip attackSound;
-  public AudioClip hurtSound;
-  public AudioClip[] gruntSound;
-  public NavMeshAgent agent;
-  public Animator animator;
-  public GameObject[] dropItems;
+  [SerializeField]
+  private AudioSource soundPlayer;
+  [SerializeField]
+  private AudioClip deathSound;
+  [SerializeField]
+  private AudioClip attackSound;
+  [SerializeField]
+  private AudioClip hurtSound;
+  [SerializeField]
+  private AudioClip[] gruntSound;
+  [SerializeField]
+  private NavMeshAgent agent;
+  [SerializeField]
+  private Animator animator;
+  [SerializeField]
+  private GameObject[] dropItems;
   public float attackRange = 1.8f;
   public float attackDamage = 10f;
   public int killPoint = 10;
@@ -35,7 +43,7 @@ public class Enemy : MonoBehaviour
   public void DropItem()
   {
     float chance = Random.value;
-    if (chance <= 0.1)
+    if (chance <= 0.15)
     {
       Instantiate(dropItems[0], gameObject.transform.position + Vector3.up, gameObject.transform.rotation);
     }

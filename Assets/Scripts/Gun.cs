@@ -4,15 +4,19 @@ using Zinnia.Action;
 
 public class Gun : MonoBehaviour
 {
-  public GameObject barrel;
-  public GameObject hitParticle;
-  public GameObject shotParticle;
+  [SerializeField]
+  private GameObject barrel;
+  [SerializeField]
+  private GameObject hitParticle;
+  [SerializeField]
+  private GameObject shotParticle;
   public float fireRate = 0.25f;
   private float defaultFireRate;
   private float defaultDamage = 5;
   public float damage = 5;
   public FloatAction squeezeVal;
-  public AudioSource gunSound;
+  [SerializeField]
+  private AudioSource gunSound;
   private float nextFire;
   private GameController gameController;
 

@@ -4,16 +4,25 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-  public GameObject pauseUiContainer;
-  public GameObject leftRayInteractor;
-  public GameObject rightRayInteractor;
-  public SpawnArea[] spawnLocations;
-  public GameObject[] enemies;
-  public CountdownTimer timer;
-  public CountdownTimer stageTimer;
-  public GameObject player;
+  [SerializeField]
+  private GameObject pauseUiContainer;
+  [SerializeField]
+  private GameObject leftRayInteractor;
+  [SerializeField]
+  private GameObject rightRayInteractor;
+  [SerializeField]
+  private SpawnArea[] spawnLocations;
+  [SerializeField]
+  private GameObject[] enemies;
+  [SerializeField]
+  private CountdownTimer timer;
+  [SerializeField]
+  private CountdownTimer stageTimer;
+  [SerializeField]
+  private GameObject player;
   public bool isPlaying = true;
   private Player playerScript;
+  private int stage = 1;
 
   void Start()
   {
@@ -22,10 +31,12 @@ public class GameController : MonoBehaviour
 
   public void SpawnRandom()
   {
-    int areaIndex = Random.Range(0, spawnLocations.Length);
-    int enemyIndex = playerScript.scoreSO.value > 100 ? Random.Range(0, enemies.Length) : 0;
-
-    Instantiate(enemies[enemyIndex], spawnLocations[areaIndex].GetRandomPosition(), player.transform.rotation);
+    for (int i = 0; i < stage; i++)
+    {
+      int areaIndex = Random.Range(0, spawnLocations.Length);
+      int enemyIndex = playerScript.scoreSO.value > 100 ? Random.Range(0, enemies.Length) : 0;
+      Instantiate(enemies[enemyIndex], spawnLocations[areaIndex].GetRandomPosition(), player.transform.rotation);
+    }
     timer.Begin();
   }
 
@@ -35,6 +46,7 @@ public class GameController : MonoBehaviour
     {
       timer.StartTime -= 0.5f;
     }
+    stage++;
     foreach (var enemy in enemies)
     {
       Enemy enemySc = enemy.GetComponent<Enemy>();

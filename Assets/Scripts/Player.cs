@@ -5,10 +5,13 @@ using Zinnia.Visual;
 
 public class Player : MonoBehaviour
 {
-  public AudioSource soundPlayer;
-  public AudioClip hitSound;
+  [SerializeField]
+  private AudioSource soundPlayer;
+  [SerializeField]
+  private AudioClip hitSound;
 
-  public TextMeshPro scoreText;
+  [SerializeField]
+  private TextMeshPro scoreText;
   public IntSO scoreSO;
 
   public CameraColorOverlay hitFader;
