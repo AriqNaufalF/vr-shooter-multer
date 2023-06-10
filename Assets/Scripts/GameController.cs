@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
   private GameObject player;
   public bool isPlaying = true;
   private Player playerScript;
-  private int stage = 1;
+  private int enemyCount = 1;
 
   void Start()
   {
@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour
 
   public void SpawnRandom()
   {
-    for (int i = 0; i < stage; i++)
+    for (int i = 0; i < enemyCount; i++)
     {
       int areaIndex = Random.Range(0, spawnLocations.Length);
       int enemyIndex = playerScript.scoreSO.value > 100 ? Random.Range(0, enemies.Length) : 0;
@@ -45,15 +45,15 @@ public class GameController : MonoBehaviour
     if (timer.StartTime > 0.5f)
     {
       timer.StartTime -= 0.5f;
+      enemyCount++;
+      foreach (var enemy in enemies)
+      {
+        Enemy enemySc = enemy.GetComponent<Enemy>();
+        enemySc.health += 5;
+        enemySc.attackDamage += 5;
+      }
+      stageTimer.Begin();
     }
-    stage++;
-    foreach (var enemy in enemies)
-    {
-      Enemy enemySc = enemy.GetComponent<Enemy>();
-      enemySc.health += 5;
-      enemySc.attackDamage += 5;
-    }
-    stageTimer.Begin();
   }
 
   public void togglePause()

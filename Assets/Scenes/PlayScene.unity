@@ -2351,7 +2351,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -8277149376291392051, guid: 4ad928a61d9612a4685b1d2ab5c52c85, type: 3}
+    m_Reference: {fileID: -6553477001080940050, guid: 4ad928a61d9612a4685b1d2ab5c52c85, type: 3}
   m_UIPressActionValue:
     m_UseReference: 1
     m_Action:
@@ -2363,7 +2363,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -8277149376291392051, guid: 4ad928a61d9612a4685b1d2ab5c52c85, type: 3}
+    m_Reference: {fileID: -6553477001080940050, guid: 4ad928a61d9612a4685b1d2ab5c52c85, type: 3}
   m_HapticDeviceAction:
     m_UseReference: 0
     m_Action:
@@ -3182,7 +3182,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 3199208200526000294, guid: 4ad928a61d9612a4685b1d2ab5c52c85, type: 3}
+    m_Reference: {fileID: -9125730733183272473, guid: 4ad928a61d9612a4685b1d2ab5c52c85, type: 3}
   m_UIPressActionValue:
     m_UseReference: 1
     m_Action:
@@ -3194,7 +3194,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 3199208200526000294, guid: 4ad928a61d9612a4685b1d2ab5c52c85, type: 3}
+    m_Reference: {fileID: -9125730733183272473, guid: 4ad928a61d9612a4685b1d2ab5c52c85, type: 3}
   m_HapticDeviceAction:
     m_UseReference: 0
     m_Action:

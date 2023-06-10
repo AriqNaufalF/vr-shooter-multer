@@ -696,6 +696,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4420627832122325047, guid: 00132049af902f64ebfe4f0848c3f38e, type: 3}
+      propertyPath: m_UIPressAction.m_Reference
+      value: 
+      objectReference: {fileID: -9125730733183272473, guid: 4ad928a61d9612a4685b1d2ab5c52c85, type: 3}
+    - target: {fileID: 4420627832122325047, guid: 00132049af902f64ebfe4f0848c3f38e, type: 3}
+      propertyPath: m_UIPressActionValue.m_Reference
+      value: 
+      objectReference: {fileID: -9125730733183272473, guid: 4ad928a61d9612a4685b1d2ab5c52c85, type: 3}
+    - target: {fileID: 4420627832737029013, guid: 00132049af902f64ebfe4f0848c3f38e, type: 3}
+      propertyPath: m_UIPressAction.m_Reference
+      value: 
+      objectReference: {fileID: -6553477001080940050, guid: 4ad928a61d9612a4685b1d2ab5c52c85, type: 3}
+    - target: {fileID: 4420627832737029013, guid: 00132049af902f64ebfe4f0848c3f38e, type: 3}
+      propertyPath: m_UIPressActionValue.m_Reference
+      value: 
+      objectReference: {fileID: -6553477001080940050, guid: 4ad928a61d9612a4685b1d2ab5c52c85, type: 3}
     - target: {fileID: 4421480719677656382, guid: 00132049af902f64ebfe4f0848c3f38e, type: 3}
       propertyPath: m_Name
       value: CameraRigs.TrackedAlias
