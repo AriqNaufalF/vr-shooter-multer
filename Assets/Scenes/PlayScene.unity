@@ -222,6 +222,8 @@ MonoBehaviour:
   damage: 5
   squeezeVal: {fileID: 1736959279}
   gunSound: {fileID: 172095666}
+  powerUpSound: {fileID: 8300000, guid: 936662f84db8009499408e95e9a7c80e, type: 3}
+  healSound: {fileID: 8300000, guid: 09f5d1411863e9b458ed29161c4ebc71, type: 3}
 --- !u!1 &172095665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,7 +1129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7455428504947032323, guid: c83d63619306b0845a841dd3cc213a70, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7455428504947032323, guid: c83d63619306b0845a841dd3cc213a70, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3885,7 +3887,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1458079943 stripped
 MonoBehaviour:
@@ -5882,7 +5884,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 764463728394286704, guid: 4e00a3ec6fbf7e5438db90779dbd843a, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 764463728394286704, guid: 4e00a3ec6fbf7e5438db90779dbd843a, type: 3}
       propertyPath: m_LocalPosition.x

@@ -23,5 +23,6 @@ Coming soon...
 - Sounds
   - [Free Sound Effects Pack](https://assetstore.unity.com/packages/audio/sound-fx/free-sound-effects-pack-155776)
   - [Zombie Sound Pack - Free Version](https://assetstore.unity.com/packages/audio/sound-fx/zombie-sound-pack-free-version-124430)
+  - [Mixit](https://mixkit.co/free-sound-effects/)
 - Particles
   - [Sherbb's Particle Collection](https://assetstore.unity.com/packages/vfx/particles/sherbb-s-particle-collection-170798)

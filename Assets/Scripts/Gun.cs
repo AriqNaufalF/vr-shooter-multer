@@ -17,6 +17,10 @@ public class Gun : MonoBehaviour
   public FloatAction squeezeVal;
   [SerializeField]
   private AudioSource gunSound;
+  [SerializeField]
+  private AudioClip powerUpSound;
+  [SerializeField]
+  private AudioClip healSound;
   private float nextFire;
   private GameController gameController;
 
@@ -63,6 +67,7 @@ public class Gun : MonoBehaviour
           PowerUp hitPowerUp = hitData.transform.GetComponent<PowerUp>();
           if (hitPowerUp != null)
           {
+            gunSound.PlayOneShot(powerUpSound);
             hitPowerUp.UseItem();
             StartCoroutine(ResetGun(hitPowerUp.appliedDuration));
           }
@@ -72,6 +77,7 @@ public class Gun : MonoBehaviour
           Heal hitHeal = hitData.transform.GetComponent<Heal>();
           if (hitHeal != null)
           {
+            gunSound.PlayOneShot(healSound);
             hitHeal.UseItem();
           }
         }
