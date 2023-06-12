@@ -12,6 +12,7 @@ public class DeathGameController : MonoBehaviour
   void Start()
   {
     scoreText.text = "Score: " + scoreSO.value.ToString("D9");
+    Time.timeScale = 1;
   }
 
   public void PlayAgain()

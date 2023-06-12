@@ -27,6 +27,7 @@ public class GameController : MonoBehaviour
   void Start()
   {
     playerScript = player.GetComponent<Player>();
+    PlayGame();
   }
 
   public void SpawnRandom()
