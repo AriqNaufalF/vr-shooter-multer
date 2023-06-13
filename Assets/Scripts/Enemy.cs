@@ -47,7 +47,7 @@ public class Enemy : MonoBehaviour
     {
       Instantiate(dropItems[0], gameObject.transform.position + Vector3.up, gameObject.transform.rotation);
     }
-    else if (chance <= 0.2)
+    else if (chance > 0.15 && chance <= 0.25)
     {
       Instantiate(dropItems[1], gameObject.transform.position + Vector3.up, gameObject.transform.rotation);
     }

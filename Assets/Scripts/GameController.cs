@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour
   private Player playerScript;
   private int enemyCount = 1;
   private GameObject gun;
-  private Vector3 defaultGunPos = new Vector3(0.1f, 0, 0.6f);
+  private Vector3 defaultGunPos = new Vector3(0.6f, 0, 0.6f);
 
   void Start()
   {
@@ -72,10 +72,13 @@ public class GameController : MonoBehaviour
 
   public void ResetGame()
   {
+    GameObject gunInteractable = gun.transform.GetChild(0).gameObject;
+    timer.StartTime = 6;
+    stageTimer.StartTime = 60;
     PlayGame();
     playerScript.ResetPlayer();
-    gun.transform.position = defaultGunPos;
-    gun.transform.rotation = Quaternion.Euler(Vector3.zero);
+    gunInteractable.transform.position = defaultGunPos;
+    gunInteractable.transform.rotation = Quaternion.Euler(new Vector3(0, 33, 0));
   }
 
   public void PlayGame()
@@ -84,6 +87,7 @@ public class GameController : MonoBehaviour
     pauseUiContainer.SetActive(false);
     leftRayInteractor.SetActive(false);
     rightRayInteractor.SetActive(false);
+    gun.SetActive(true);
     timer.Resume();
     stageTimer.Resume();
     Time.timeScale = 1;
@@ -96,6 +100,7 @@ public class GameController : MonoBehaviour
     pauseUiContainer.SetActive(true);
     leftRayInteractor.SetActive(true);
     rightRayInteractor.SetActive(true);
+    gun.SetActive(false);
     timer.Pause();
     stageTimer.Pause();
     AudioListener.pause = true;
