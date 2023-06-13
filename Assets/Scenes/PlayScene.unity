@@ -193,7 +193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163269304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.109, y: 0, z: 0.77561635}
+  m_LocalPosition: {x: 0.1, y: 0, z: 0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2884,6 +2884,67 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &1117814218
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7533518594173930136, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: interactor
+      value: 
+      objectReference: {fileID: 882256420}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930138, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_Name
+      value: Interactions.PointerInteractors.DistanceGrabberLeft
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
 --- !u!1 &1218250334
 GameObject:
   m_ObjectHideFlags: 0
@@ -4201,6 +4262,67 @@ Transform:
   m_Father: {fileID: 496347282}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1531299857
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7533518594173930136, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: interactor
+      value: 
+      objectReference: {fileID: 2043098494}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930137, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533518594173930138, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
+      propertyPath: m_Name
+      value: Interactions.PointerInteractors.DistanceGrabberRight
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 24fb25e1fad4826418ce7be5c1cb2b9f, type: 3}
 --- !u!1 &1531417870
 GameObject:
   m_ObjectHideFlags: 0
@@ -5610,7 +5732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2884100001437393637, guid: fe6a616c6215faa47b11c459561a0e7f, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2884100001437393637, guid: fe6a616c6215faa47b11c459561a0e7f, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -5635,7 +5757,7 @@ PrefabInstance:
     - target: {fileID: 2884100001437393637, guid: fe6a616c6215faa47b11c459561a0e7f, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 803942222}
+      objectReference: {fileID: 0}
     - target: {fileID: 2884100001437393637, guid: fe6a616c6215faa47b11c459561a0e7f, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: Tilia.Interactions.Interactables.Interactables.InteractableFacade, Tilia.Interactions.Interactables.Unity.Runtime
@@ -5742,7 +5864,7 @@ PrefabInstance:
       objectReference: {fileID: 624791438}
     - target: {fileID: 2884100002311200429, guid: fe6a616c6215faa47b11c459561a0e7f, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2884100002311200429, guid: fe6a616c6215faa47b11c459561a0e7f, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -5767,7 +5889,7 @@ PrefabInstance:
     - target: {fileID: 2884100002311200429, guid: fe6a616c6215faa47b11c459561a0e7f, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 803942222}
+      objectReference: {fileID: 0}
     - target: {fileID: 2884100002311200429, guid: fe6a616c6215faa47b11c459561a0e7f, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: Tilia.Interactions.Interactables.Interactables.InteractableFacade, Tilia.Interactions.Interactables.Unity.Runtime

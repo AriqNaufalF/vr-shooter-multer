@@ -23,10 +23,13 @@ public class GameController : MonoBehaviour
   public bool isPlaying = true;
   private Player playerScript;
   private int enemyCount = 1;
+  private GameObject gun;
+  private Vector3 defaultGunPos = new Vector3(0.1f, 0, 0.6f);
 
   void Start()
   {
     playerScript = player.GetComponent<Player>();
+    gun = GameObject.FindGameObjectWithTag("Gun");
     PlayGame();
   }
 
@@ -71,6 +74,8 @@ public class GameController : MonoBehaviour
   {
     PlayGame();
     playerScript.ResetPlayer();
+    gun.transform.position = defaultGunPos;
+    gun.transform.rotation = Quaternion.Euler(Vector3.zero);
   }
 
   public void PlayGame()
