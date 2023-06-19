@@ -9,7 +9,12 @@ VR Zombie Wave Shooter is an immersive virtual reality game where your survival 
 
 ## Installation
 
-Coming soon...
+1. Download the [APK file](https://ariqnaufalf.itch.io/nyi-roro-kiduls-wrath-zombie-siege).
+2. Install [Sidequest](https://sidequestvr.com/setup-howto) advance installer to your pc.
+3. After installing open the Sidequest app and click Install APK file from the folder on computer icon in the top right.
+4. Select the APK file you downloaded before and click open.
+5. Wait until the process is finish.
+6. If successful, the game should be already installed on your oculus quest. You can find it in your app library unknown source.
 
 ## Assets
 
