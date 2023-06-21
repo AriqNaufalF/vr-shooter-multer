@@ -2,6 +2,10 @@
 
 VR Zombie Wave Shooter is an immersive virtual reality game where your survival skills are put to the ultimate test. In this intense and thrilling shooter experience, you must stay alive for as long as possible against hordes of relentless zombies. Your goal is to reach the highest score while combating increasingly stronger and more aggressive zombies.
 
+- [Itch.io](https://ariqnaufalf.itch.io/nyi-roro-kiduls-wrath-zombie-siege)
+- [Trailer](https://youtu.be/4tn5x37L87c)
+- [Full project file](https://telkomuniversityofficial-my.sharepoint.com/:f:/g/personal/amirhf_telkomuniversity_ac_id/EuOhwxAPf3JEjTZWTNyAQoABSK-1N8DRiBN8EF40joWy5g?e=jo41gK)`.zip`
+
 ## Requirements
 
 - Oculus Quest 2.
